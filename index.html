@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obra Abierta</title>
+<meta name="description" content="Tablero diario de ofertas de empleo en construcción en Chile para un ingeniero civil en obras civiles e ingeniero constructor: administrador de obra, jefe de oficina técnica, coordinador BIM y cargos de jefatura en edificación, industrial y obras civiles.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%8F%97%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Obra Abierta — tablero diario de ofertas">
+<meta property="og:description" content="Tablero diario de ofertas de empleo en construcción en Chile para un ingeniero civil en obras civiles e ingeniero constructor: administrador de obra, jefe de oficina técnica, coordinador BIM y cargos de jefatura en edificación, industrial y obras civiles.">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script>
+  // Evita que el navegador muestre una versión en caché de esta página.
+  (function () {
+    // Si el navegador restaura la pestaña desde su caché de retroceso (bfcache),
+    // vuelve a cargarla desde el servidor para traer la última publicación.
+    try {
+      window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { location.reload(); }
+      });
+    } catch (e) {}
+    // Si la pestaña estuvo oculta más de 3 minutos (cambiaste de pestaña, minimizaste,
+    // bloqueaste el equipo) y vuelve a estar visible, recarga por si hay una versión nueva.
+    try {
+      var STALE_MS = 3 * 60 * 1000;
+      var hiddenAt = null;
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          hiddenAt = Date.now();
+        } else if (hiddenAt !== null && (Date.now() - hiddenAt) > STALE_MS) {
+          location.reload();
+        }
+      });
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #F2F3F0;
+    --surface: #FFFFFF;
+    --surface-2: #E9EBE6;
+    --line: #D3D7D0;
+    --ink: #1B2128;
+    --ink-2: #4E5964;
+    --ink-3: #7B8791;
+    --accent: #1F4E8C;
+    --accent-ink: #FFFFFF;
+    --new: #F0B429;
+    --new-ink: #2A2000;
+    --closed: #A33A2F;
+    --shadow: 0 1px 0 rgba(27,33,40,.06), 0 6px 18px -12px rgba(27,33,40,.25);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181C; --surface: #1C2227; --surface-2: #242C33; --line: #313A43;
+      --ink: #E8EBEA; --ink-2: #AEB7BE; --ink-3: #7E8A94;
+      --accent: #6FA0E0; --accent-ink: #0E1A2B;
+      --new: #F0B429; --new-ink: #2A2000; --closed: #E07A6E;
+      --shadow: 0 1px 0 rgba(0,0,0,.3), 0 6px 18px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181C; --surface: #1C2227; --surface-2: #242C33; --line: #313A43;
+    --ink: #E8EBEA; --ink-2: #AEB7BE; --ink-3: #7E8A94;
+    --accent: #6FA0E0; --accent-ink: #0E1A2B;
+    --new: #F0B429; --new-ink: #2A2000; --closed: #E07A6E;
+    --shadow: 0 1px 0 rgba(0,0,0,.3), 0 6px 18px -12px rgba(0,0,0,.6);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px; line-height: 1.5;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--new); outline-offset: 2px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+  header { display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
+  .eyebrow { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; color: var(--ink-2); font-weight: 600; }
+  h1 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700; font-size: 52px; line-height: .95; margin: 4px 0 8px; text-wrap: balance; letter-spacing: -.01em; }
+  .profile { color: var(--ink-2); max-width: 60ch; margin: 0; }
+  .stamp { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--ink-2); text-align: right; line-height: 1.6; }
+  .stamp strong { color: var(--ink); font-weight: 500; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0; }
+  .stat { background: var(--surface); border: 1px solid var(--line); padding: 12px 14px; box-shadow: var(--shadow); }
+  .stat .n { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-size: 36px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .l { font-size: 12px; color: var(--ink-2); text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
+  .stat.new .n { color: var(--new-ink); background: var(--new); display: inline-block; padding: 0 8px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; align-items: center; }
+  .filters .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin-right: 4px; }
+  .chip { font: inherit; font-size: 13px; padding: 5px 11px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; border-radius: 999px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  .day { margin-top: 28px; }
+  .day h2 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 600; font-size: 22px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 10px; display: flex; gap: 12px; align-items: baseline; }
+  .day h2 small { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); text-transform: none; letter-spacing: 0; }
+  .jobs { display: grid; gap: 10px; }
+  .job { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); padding: 14px 16px; display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; box-shadow: var(--shadow); }
+  .job.is-new { border-left-color: var(--new); }
+  .job.is-closed { border-left-color: var(--closed); opacity: .7; }
+  .job .t { font-weight: 600; font-size: 16px; margin: 0; }
+  .job .t a { color: var(--ink); text-decoration: none; }
+  .job .t a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+  .job .m { color: var(--ink-2); font-size: 14px; margin: 0; }
+  .job .m span + span::before { content: " · "; color: var(--ink-3); }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; align-content: start; }
+  .tag { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; padding: 3px 7px; background: var(--surface-2); color: var(--ink-2); white-space: nowrap; }
+  .tag.new { background: var(--new); color: var(--new-ink); font-weight: 600; }
+  .tag.closed { background: var(--closed); color: #fff; }
+  .tag.salary { background: var(--accent); color: var(--accent-ink); }
+  .job .note { grid-column: 1 / -1; font-size: 13.5px; color: var(--ink-2); margin: 2px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }
+  .job .src { grid-column: 1 / -1; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); }
+
+  .method { margin: 0 0 22px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+  .method summary { cursor: pointer; list-style: none; padding: 12px 16px; display: flex; align-items: baseline; gap: 12px; font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+  .method summary::-webkit-details-marker { display: none; }
+  .method summary::before { content: "+"; font-family: "IBM Plex Mono", monospace; color: var(--accent); width: 1em; }
+  .method[open] summary::before { content: "–"; }
+  .method summary small { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--ink-3); }
+  .method .body { padding: 4px 16px 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px; border-top: 1px solid var(--line); }
+  .method h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin: 14px 0 6px; font-weight: 600; }
+  .method p { margin: 0 0 8px; font-size: 14px; color: var(--ink-2); max-width: 62ch; }
+  .method p strong { color: var(--ink); font-weight: 600; }
+  .method .flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 8px; font-size: 12px; }
+  .method .flow .st { padding: 3px 8px; border: 1px solid var(--line); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: var(--ink-2); }
+  .method .flow .st.new { background: var(--new); color: var(--new-ink); border-color: var(--new); }
+  .method .flow .st.act { border-left: 4px solid var(--accent); }
+  .method .flow .st.cls { border-left: 4px solid var(--closed); }
+  .method .flow .arrow { color: var(--ink-3); font-family: "IBM Plex Mono", monospace; }
+  @media (max-width: 640px) { .method .body { grid-template-columns: 1fr; } }
+
+  .empty { border: 1px dashed var(--line); padding: 36px 20px; text-align: center; color: var(--ink-2); margin-top: 24px; }
+  .empty h2 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-size: 26px; margin: 0 0 6px; color: var(--ink); }
+
+  .pager { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 28px; }
+  .pager button { font: inherit; font-size: 13px; padding: 7px 16px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; box-shadow: var(--shadow); }
+  .pager button:disabled { opacity: .4; cursor: default; box-shadow: none; }
+  .pager button:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
+  .pager .pageinfo { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+
+  .tablewrap { overflow-x: auto; }
+
+  .heatmap { margin: 22px 0 28px; }
+  .heatmap h2 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-size: 18px; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 4px; color: var(--ink-2); }
+  .heatmap p.sub { margin: 0 0 14px; font-size: 13px; color: var(--ink-3); }
+  .heatmap table { border-collapse: collapse; width: 100%; font-size: 13px; min-width: 480px; }
+  .heatmap th, .heatmap td { padding: 0; text-align: center; border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  .heatmap thead th { padding: 8px 10px; font-family: "Barlow Condensed", "Arial Narrow", sans-serif; text-transform: uppercase; letter-spacing: .05em; font-size: 11px; font-weight: 600; color: var(--ink-2); background: var(--surface); }
+  .heatmap tbody th { padding: 8px 10px; text-align: left; font-weight: 500; color: var(--ink); background: var(--surface); white-space: nowrap; }
+  .heatmap td.hm-empty { padding: 8px 10px; color: var(--ink-3); }
+  .heatmap td.hm-total { padding: 8px 10px; font-weight: 600; background: var(--surface); color: var(--ink); }
+  .heatmap button.hm-cell { display: block; width: 100%; height: 100%; margin: 0; padding: 8px 10px; border: 0; font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; }
+  .heatmap button.hm-cell:hover, .heatmap button.hm-cell:focus-visible { box-shadow: inset 0 0 0 2px var(--ink); outline: none; }
+  .heatmap .legend { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 12px; color: var(--ink-3); }
+  .heatmap .legend .swatch { width: 70px; height: 10px; border: 1px solid var(--line); background: linear-gradient(to right, var(--surface), var(--accent)); }
+
+  .cellfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 16px; padding: 10px 14px; background: var(--surface-2); border-left: 4px solid var(--accent); font-size: 13.5px; color: var(--ink-2); }
+  .cellfilter strong { color: var(--ink); }
+  .cellfilter button { font: inherit; font-size: 12px; padding: 4px 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; border-radius: 999px; }
+  .cellfilter button:hover { border-color: var(--accent); color: var(--accent); }
+
+  @media (max-width: 640px) {
+    header { grid-template-columns: 1fr; }
+    .stamp { text-align: left; }
+    h1 { font-size: 40px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .job { grid-template-columns: 1fr; }
+    .tags { justify-content: flex-start; }
+    .pager { flex-wrap: wrap; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .job { transition: transform .15s ease; }
+    .job:hover { transform: translateY(-1px); }
+  }
+
+  .foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 12.5px; }
+  .foot p { margin: 0 0 4px; }
+  .foot a { color: var(--ink-2); }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Tablero diario de ofertas</div>
+      <h1>Obra Abierta</h1>
+      <p class="profile" id="profile"></p>
+    </div>
+    <div class="stamp" id="stamp"></div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <section class="heatmap" id="heatmap-wrap" hidden>
+    <h2>Distribución por área y ubicación</h2>
+    <p class="sub">Ofertas vigentes agrupadas por región y sector de la industria. Haz clic en un número para ver esas ofertas.</p>
+    <div class="tablewrap">
+      <table>
+        <thead id="heatmap-head"></thead>
+        <tbody id="heatmap-body"></tbody>
+      </table>
+    </div>
+    <div class="legend"><span>Menos</span><span class="swatch"></span><span>Más</span></div>
+  </section>
+
+  <details class="method">
+    <summary>Cómo se construye este tablero <small>fuentes, filtros y ciclo de vida de cada oferta</small></summary>
+    <div class="body">
+      <div>
+        <h3>1 · Navegador con sesión iniciada (canal principal, todos los días a las 07:00)</h3>
+        <p>Una tarea programada abre pestañas en un Chrome que permanece abierto con la extensión de Claude, y recorre en este orden: <strong>LinkedIn Jobs</strong> (Chile, última semana, seis consultas por cargo), <strong>Laborum</strong> (listado reciente con descripciones completas), <strong>Computrabajo</strong>, <strong>Chiletrabajos</strong> y <strong>Trabajando.cl</strong>, y cuando alcanza el tiempo, los portales de empleo de constructoras e inmobiliarias grandes y la CChC. Abre solo las fichas que pasan el filtro y extrae años exigidos, carrera, tipo de proyecto, turno y fecha.</p>
+        <p><strong>Solo lectura:</strong> nunca escribe credenciales, no postula, no envía formularios ni mensajes, no crea alertas. Si Chrome no responde, la ejecución sigue con la nube y la notificación empieza con "NAVEGADOR NO DISPONIBLE".</p>
+
+        <h3>2 · Búsqueda en la nube (complemento y respaldo)</h3>
+        <p>Al menos seis consultas de búsqueda web que cruzan cargos (administrador de obra, jefe de oficina técnica, coordinador BIM, gerente de obra, jefe de proyectos) con portales chilenos, más lectura directa de fichas en Indeed Chile y Trabajando.cl, que sí responden desde la nube. Computrabajo, Chiletrabajos y Laborum bloquean ese acceso; por eso van por el navegador.</p>
+      </div>
+      <div>
+        <h3>3 · Filtro de pertinencia</h3>
+        <p>Se aceptan cargos de jefatura o gestión de obra para Ingeniero Civil en Obras Civiles, Ingeniero Constructor o Constructor Civil que pidan entre 3 y 12 años de experiencia, en cualquier región de Chile; fuera de Santiago y Valparaíso la nota advierte relocalización, alojamiento y sistema de turnos. Prioridad: <strong>edificación</strong> en altura e inmobiliaria (el núcleo de la trayectoria), luego <strong>industrial</strong> (plantas, bodegas, logística) y <strong>obras civiles</strong> e infraestructura cuando no exigen experiencia vial o hidráulica previa. Los cargos de coordinación BIM se incluyen como vía alternativa y van bajo <strong>Otro</strong>.</p>
+        <p>Se excluyen la minería en todas sus formas (faenas y proyectos EPC/EPCM), prácticas, cargos junior o de ayudante, los "administrativos de obra" (cargo contable que los buscadores confunden con administrador), profesional de terreno sin jefatura, inspección técnica de obra (ITO), avisos que piden menos de 3 o más de 15 años, cargos fuera de Chile, avisos con texto plantilla o empresa no verificable, y avisos de más de 30 días.</p>
+
+        <h3>4 · Verificación</h3>
+        <p>Cada enlace se abre y se comprueba que corresponde al aviso. La renta se muestra solo si el aviso la publica; nunca se estima. La nota de cada tarjeta explica por qué encaja y qué advertir (turnos, tipo de obra, años exigidos, fecha de cierre).</p>
+
+        <h3>5 · Ciclo de vida</h3>
+        <div class="flow">
+          <span class="st new">Nueva</span><span class="arrow">→</span>
+          <span class="st act">Vigente</span><span class="arrow">→</span>
+          <span class="st cls">Cerrada</span><span class="arrow">→</span>
+          <span class="st">Se retira a los 30 días</span>
+        </div>
+        <p>Cada oferta recibe un identificador estable (empresa + cargo + ciudad) para no duplicarla. Es <strong>Nueva</strong> solo el día en que se detecta; después pasa a <strong>Vigente</strong>. Si deja de aparecer y su enlace ya no abre, se marca <strong>Cerrada</strong>. El detalle de cada ejecución (qué fuentes fallaron, cuántas ofertas nuevas o cerradas) se conserva internamente para depurar el proceso, aunque ya no se muestra en esta página.</p>
+
+        <h3>6 · Publicación</h3>
+        <p>Esta página es estática y vive en GitHub Pages. La tarea diaria no reescribe el sitio: solo actualiza el archivo <strong>data.json</strong> del repositorio, y la página lo lee cada vez que alguien la abre. Por eso la dirección nunca cambia y siempre muestra la última búsqueda, sin versiones que haya que ir habilitando a mano. Cada actualización queda además como un commit, de modo que el historial del tablero es el historial del repositorio.</p>
+      </div>
+    </div>
+  </details>
+
+  <div class="cellfilter" id="cellfilter" hidden></div>
+
+  <div class="filters" id="filters" hidden>
+    <span class="lbl">Ver</span>
+    <button class="chip" data-f="all" aria-pressed="true">Todas</button>
+    <button class="chip" data-f="new" aria-pressed="false">Solo nuevas</button>
+    <button class="chip" data-f="edificacion" aria-pressed="false">Edificación</button>
+    <button class="chip" data-f="industrial" aria-pressed="false">Industrial</button>
+    <button class="chip" data-f="obras-civiles" aria-pressed="false">Obras civiles</button>
+    <button class="chip" data-f="salary" aria-pressed="false">Con renta publicada</button>
+  </div>
+
+  <div id="content"></div>
+  <nav class="pager" id="pager" hidden></nav>
+
+  <footer class="foot">
+    <p>Tablero generado automáticamente una vez al día. Los datos se leen de
+      <a href="https://github.com/jcastillose/obra-abierta/blob/main/data.json">data.json</a>
+      y el código está en
+      <a href="https://github.com/jcastillose/obra-abierta">github.com/jcastillose/obra-abierta</a>.</p>
+    <p>Cada aviso enlaza al portal donde fue publicado; la renta aparece solo cuando el aviso la declara.</p>
+  </footer>
+</div>
+
+<script>
+function boot(data) {
+  var jobs = (data.jobs || []).slice();
+  var filter = 'all';
+  var cellFilter = null;
+  var page = 1;
+  var PAGE_SIZE = 20;
+
+  var SECTOR = { 'edificacion': 'Edificación', 'industrial': 'Industrial', 'obras-civiles': 'Obras civiles', 'otro': 'Otro' };
+  var SECTOR_ORDER = ['edificacion', 'industrial', 'obras-civiles', 'otro'];
+  var REGION_ORDER = ['Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama', 'Coquimbo', 'Valparaíso', 'Metropolitana', "O'Higgins", 'Maule', 'Ñuble', 'Biobío', 'La Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes'];
+  var MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  function fmtDate(s) {
+    if (!s) return '';
+    var p = s.split('-'); if (p.length < 3) return s;
+    return parseInt(p[2], 10) + ' ' + MESES[parseInt(p[1], 10) - 1] + ' ' + p[0];
+  }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function scrollToContent() {
+    try {
+      if (content.scrollIntoView) content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (e) {}
+  }
+
+  document.getElementById('profile').textContent = data.profile || '';
+  document.getElementById('stamp').innerHTML = (data.updated
+    ? 'Última actualización<br><strong>' + esc(data.updated) + '</strong> (Santiago)'
+    : 'Aún sin ejecuciones<br><strong>Se actualiza cada día a las 07:00</strong>') +
+    '<br><a href="#" id="reload-link" style="font-size:11px;">↻ Forzar recarga</a>';
+  var reloadLink = document.getElementById('reload-link');
+  if (reloadLink) {
+    reloadLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      location.reload();
+    });
+  }
+
+  var open = jobs.filter(function (j) { return j.status !== 'closed'; });
+  var nnew = jobs.filter(function (j) { return j.status === 'new'; }).length;
+  var nsal = open.filter(function (j) { return j.salary; }).length;
+  var nclosed = jobs.length - open.length;
+  document.getElementById('stats').innerHTML =
+    '<div class="stat new"><div class="n">' + nnew + '</div><div class="l">Nuevas hoy</div></div>' +
+    '<div class="stat"><div class="n">' + open.length + '</div><div class="l">Vigentes</div></div>' +
+    '<div class="stat"><div class="n">' + nsal + '</div><div class="l">Con renta publicada</div></div>' +
+    '<div class="stat"><div class="n">' + nclosed + '</div><div class="l">Cerradas (30 días)</div></div>';
+
+  var content = document.getElementById('content');
+  var pagerEl = document.getElementById('pager');
+  var cellFilterEl = document.getElementById('cellfilter');
+  if (!jobs.length) {
+    content.innerHTML = '<div class="empty"><h2>Todavía no hay ofertas</h2>Cuando corra la primera búsqueda, las ofertas aparecerán aquí agrupadas por el día en que se detectaron.</div>';
+  } else {
+    document.getElementById('filters').hidden = false;
+    renderHeatmap();
+    render();
+  }
+
+  document.getElementById('heatmap-body').addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.hm-cell') : null;
+    if (!btn) return;
+    cellFilter = { region: btn.getAttribute('data-region'), sector: btn.getAttribute('data-sector') };
+    page = 1;
+    Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-f') === 'all' ? 'true' : 'false'); });
+    render();
+    scrollToContent();
+  });
+
+  function updateCellFilterBanner() {
+    if (!cellFilter) { cellFilterEl.hidden = true; cellFilterEl.innerHTML = ''; return; }
+    cellFilterEl.hidden = false;
+    cellFilterEl.innerHTML = 'Filtrando por <strong>' + esc(cellFilter.region) + ' · ' + esc(SECTOR[cellFilter.sector] || cellFilter.sector) + '</strong>' +
+      '<button type="button" id="clear-cellfilter">Ver todas las ofertas</button>';
+    var clearBtn = document.getElementById('clear-cellfilter');
+    if (clearBtn) clearBtn.addEventListener('click', function () { cellFilter = null; page = 1; render(); });
+  }
+
+  function render() {
+    updateCellFilterBanner();
+    var list = jobs.filter(function (j) {
+      if (cellFilter) return j.region === cellFilter.region && j.sector === cellFilter.sector && j.status !== 'closed';
+      if (filter === 'new') return j.status === 'new';
+      if (filter === 'salary') return !!j.salary && j.status !== 'closed';
+      if (filter === 'edificacion' || filter === 'industrial' || filter === 'obras-civiles') return j.sector === filter && j.status !== 'closed';
+      return true;
+    });
+    if (!list.length) {
+      content.innerHTML = '<div class="empty">Ninguna oferta coincide con este filtro.</div>';
+      pagerEl.hidden = true;
+      return;
+    }
+    var paginated = list.length > PAGE_SIZE;
+    var totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+    if (page > totalPages) page = totalPages;
+    if (page < 1) page = 1;
+    var pageList = paginated ? list.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) : list;
+
+    var groups = {};
+    pageList.forEach(function (j) { (groups[j.first_seen] = groups[j.first_seen] || []).push(j); });
+    var days = Object.keys(groups).sort().reverse();
+    content.innerHTML = days.map(function (d) {
+      return '<section class="day"><h2>' + esc(fmtDate(d)) + ' <small>' + groups[d].length + (groups[d].length === 1 ? ' oferta' : ' ofertas') + (paginated ? ' en esta página' : ' detectadas') + '</small></h2><div class="jobs">' +
+        groups[d].map(card).join('') + '</div></section>';
+    }).join('');
+
+    if (paginated) {
+      pagerEl.hidden = false;
+      pagerEl.innerHTML =
+        '<button type="button" id="pager-prev"' + (page <= 1 ? ' disabled' : '') + '>← Anterior</button>' +
+        '<span class="pageinfo">Página ' + page + ' de ' + totalPages + ' · ' + list.length + ' ofertas</span>' +
+        '<button type="button" id="pager-next"' + (page >= totalPages ? ' disabled' : '') + '>Siguiente →</button>';
+      var prevBtn = document.getElementById('pager-prev');
+      var nextBtn = document.getElementById('pager-next');
+      if (prevBtn) prevBtn.addEventListener('click', function () { if (page > 1) { page--; render(); scrollToContent(); } });
+      if (nextBtn) nextBtn.addEventListener('click', function () { if (page < totalPages) { page++; render(); scrollToContent(); } });
+    } else {
+      pagerEl.hidden = true;
+    }
+  }
+
+  function renderHeatmap() {
+    var wrap = document.getElementById('heatmap-wrap');
+    var active = jobs.filter(function (j) { return j.status !== 'closed'; });
+    if (!active.length) { wrap.hidden = true; return; }
+
+    var counts = {};
+    var regionTotals = {};
+    var max = 0;
+    active.forEach(function (j) {
+      var r = j.region || 'Sin región';
+      var s = SECTOR.hasOwnProperty(j.sector) ? j.sector : 'otro';
+      counts[r] = counts[r] || {};
+      counts[r][s] = (counts[r][s] || 0) + 1;
+      regionTotals[r] = (regionTotals[r] || 0) + 1;
+      if (counts[r][s] > max) max = counts[r][s];
+    });
+
+    var regions = REGION_ORDER.filter(function (r) { return regionTotals[r]; });
+    Object.keys(regionTotals).forEach(function (r) { if (regions.indexOf(r) === -1) regions.push(r); });
+    if (!regions.length) { wrap.hidden = true; return; }
+
+    function cellStyle(n) {
+      var frac = 0.16 + 0.74 * (n / max);
+      var bg = 'color-mix(in oklab, var(--accent) ' + Math.round(frac * 100) + '%, var(--surface))';
+      var fg = frac >= 0.55 ? 'var(--accent-ink)' : 'var(--ink)';
+      return 'background:' + bg + ';color:' + fg + ';';
+    }
+
+    var head = '<tr><th scope="col">Región</th>' +
+      SECTOR_ORDER.map(function (s) { return '<th scope="col">' + esc(SECTOR[s]) + '</th>'; }).join('') +
+      '<th scope="col">Total</th></tr>';
+
+    var body = regions.map(function (r) {
+      var cells = SECTOR_ORDER.map(function (s) {
+        var n = (counts[r] && counts[r][s]) || 0;
+        if (!n) {
+          return '<td class="hm-empty" title="' + esc(r) + ' — ' + esc(SECTOR[s]) + ': sin ofertas">–</td>';
+        }
+        var label = n + (n === 1 ? ' oferta' : ' ofertas');
+        return '<td><button type="button" class="hm-cell" style="' + cellStyle(n) + '" data-region="' + esc(r) + '" data-sector="' + esc(s) + '" title="Ver ' + label + ' en ' + esc(r) + ' — ' + esc(SECTOR[s]) + '">' + n + '</button></td>';
+      }).join('');
+      return '<tr><th scope="row">' + esc(r) + '</th>' + cells + '<td class="hm-total">' + regionTotals[r] + '</td></tr>';
+    }).join('');
+
+    document.getElementById('heatmap-head').innerHTML = head;
+    document.getElementById('heatmap-body').innerHTML = body;
+    wrap.hidden = false;
+  }
+
+  function card(j) {
+    var cls = 'job' + (j.status === 'new' ? ' is-new' : '') + (j.status === 'closed' ? ' is-closed' : '');
+    var tags = '';
+    if (j.status === 'new') tags += '<span class="tag new">Nueva</span>';
+    if (j.status === 'closed') tags += '<span class="tag closed">Cerrada</span>';
+    if (j.sector && SECTOR[j.sector]) tags += '<span class="tag">' + esc(SECTOR[j.sector]) + '</span>';
+    if (j.salary) tags += '<span class="tag salary">' + esc(j.salary) + '</span>';
+    var title = j.url ? '<a href="' + esc(j.url) + '" target="_blank" rel="noopener">' + esc(j.title) + '</a>' : esc(j.title);
+    var meta = [j.company, j.location || j.region].filter(Boolean).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
+    return '<article class="' + cls + '">' +
+      '<div><p class="t">' + title + '</p><p class="m">' + meta + '</p></div>' +
+      '<div class="tags">' + tags + '</div>' +
+      (j.note ? '<p class="note">' + esc(j.note) + '</p>' : '') +
+      '<div class="src">' + esc(j.source || '') + (j.last_seen && j.last_seen !== j.first_seen ? ' · visto por última vez ' + esc(fmtDate(j.last_seen)) : '') + '</div>' +
+      '</article>';
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (b) {
+    b.addEventListener('click', function () {
+      filter = b.getAttribute('data-f');
+      cellFilter = null;
+      page = 1;
+      Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      render();
+    });
+  });
+}
+
+// Los datos viven en data.json, que la tarea diaria reescribe. El parametro de
+// consulta y no-store evitan que el navegador o el CDN sirvan una copia antigua.
+document.getElementById('content').innerHTML =
+  '<div class="empty"><h2>Cargando ofertas\u2026</h2>Leyendo data.json</div>';
+
+fetch('data.json?v=' + Date.now(), { cache: 'no-store' })
+  .then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(function (data) { boot(data); })
+  .catch(function (err) {
+    document.getElementById('content').innerHTML =
+      '<div class="empty"><h2>No se pudieron cargar las ofertas</h2>' +
+      'No fue posible leer <code>data.json</code> (' + String(err.message || err) + '). ' +
+      'Recarga la p\u00e1gina en unos minutos.</div>';
+  });
+</script>
+</body>
+</html>
