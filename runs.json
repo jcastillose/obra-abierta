@@ -1,1 +1,12 @@
-
+{
+  "updated": "2026-09-01 15:36",
+  "runs": [
+    {
+      "date": "2026-09-01",
+      "found": 47,
+      "new": 11,
+      "closed": 0,
+      "note": "Navegador integrado (Claude Browser) usado como canal principal tras no poder resolver la selección de navegador ambigua de Claude in Chrome en sesión no interactiva. LinkedIn: ~15 fichas abiertas (búsquedas administrador de obra, jefe de oficina técnica, coordinador BIM, gerente de construcción, jefe de proyecto inmobiliaria); varias descartadas por minería, ITO, carrera exclusiva no aceptada, menos de 3 años o más de 15 años. Laborum: ~6 búsquedas (recientes=true), varias fichas leídas con descripción completa; descartados los \"administrativo de obra\" (rol de apoyo, no jefatura) y roles mineros. Computrabajo: listados completos vía extracción de enlaces (el listado visual solo mostraba la primera ficha destacada); ~8 fichas abiertas, mayoría descartada por minería o ITO. trabajo.org e Indeed Chile vía WebFetch en la nube: 4 búsquedas, 2 verificaciones puntuales. Chiletrabajos y Trabajando.cl no se probaron en esta ejecución por tiempo. Se descartaron avisos de empresas plantilla reincidentes (4Mix Beto, Rajtattva, Ingenieros Contracting, Helena Frey, Peyvand, Legend Construction, JP Budowa, WebTotal Hosting) detectados en Indeed. runs.json se reconstruye desde cero: el archivo en el repositorio estaba vacío (posible fallo de escritura en una ejecución previa)."
+    }
+  ]
+}
