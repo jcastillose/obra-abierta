@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-01 15:36",
+  "updated": "2026-09-01 17:05",
   "runs": [
+    {
+      "date": "2026-09-01",
+      "found": 51,
+      "new": 4,
+      "closed": 0,
+      "note": "Segunda ejecución del día. Navegador: Claude in Chrome quedó bloqueado por selección de navegador ambigua (dos Chrome vinculados, sesión no interactiva); se usó el navegador integrado (Claude Browser) como canal principal, sin insistir con Claude in Chrome. LinkedIn: ~14 fichas abiertas (administrador de obra, jefe de oficina técnica, coordinador BIM, gerente de construcción, jefe de proyecto inmobiliaria); 2 nuevas incorporadas (BUTIK Consultores y una empresa confidencial de retail, ambas Jefe de Proyectos); descartadas por minería, ITO, ferroviario, menos de 3 años, más de 15 años o carrera no aceptada. Laborum: 5 búsquedas (recientes=true); 1 nueva incorporada (Constructora Oval, Chillán); descartados los \"administrativo de obra\" y roles mineros/viales. Computrabajo: listados vía extracción de enlaces; ~10 fichas abiertas, todas descartadas (ITO, minería, ferroviario, menos de 3 años, o ya en el tablero). Chiletrabajos y Trabajando.cl: se probaron una vez cada uno y volvieron a fallar (el buscador de Chiletrabajos ignora el término y Trabajando.cl respondió con error de página caída); no se insistió. WebFetch en la nube: 6 consultas (Indeed Chile x4, trabajo.org x2); 1 nueva incorporada (EBCO, Santiago); se descartaron nuevamente los avisos de empresas plantilla reincidentes en Indeed (4Mix Beto, Rajtattva, Ingenieros Contracting, Helena Frey, Peyvand, Legend Construction, JP Budowa, WebTotal Hosting). Se reconfirmaron como activas 21 ofertas ya existentes cuyo enlace se volvió a abrir en esta pasada; el resto de las ofertas del tablero no se reintentó y se mantiene sin cambios (no se marcó ninguna como cerrada)."
+    },
     {
       "date": "2026-09-01",
       "found": 47,
