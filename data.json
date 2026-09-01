@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01 15:36",
+  "updated": "2026-09-01 17:05",
   "profile": "Ingeniero Civil en Obras Civiles (USACH) e Ingeniero Constructor (INACAP), más de 10 años en edificación en altura e industrial. Administrador de obra en proyectos habitacionales de 15 a 39 pisos, oficinas, hotel, retail y una planta industrial; más de 80.000 m² construidos. Diplomado en Coordinación BIM (PlanBIM/CORFO); Revit, Autodesk Construction Cloud, SAP, MS Project. Base en Santiago, disponible para todo Chile. Cargos objetivo: administrador de obra, jefe de proyecto, gerente de construcción, jefe de oficina técnica, coordinador BIM.",
   "jobs": [
     {
@@ -14,7 +14,7 @@
       "url": "https://www.laborum.cl/empleos/urgente-administrador-de-obra-de-edificacion-en-altura-para-puerto-montt-1118395018.html",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Cargo objetivo exacto: liderar y gestionar integralmente un proyecto de edificación en altura. Pide Ingeniero Civil en Obras Civiles, Ingeniero en Construcción, Constructor Civil o carrera afín, con 7 a 10 años en ejecución de obras y 10 años en tipología edificación. Advertencia: relocalización a Puerto Montt, Región de Los Lagos, sin mención de alojamiento ni turnos; empresa no identificada (confidencial)."
     },
     {
@@ -29,7 +29,7 @@
       "url": "https://www.laborum.cl/empleos/administrador-de-obra-1118336211.html",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Cargo objetivo exacto para proyecto de viviendas con 77% de avance. Pide Constructor Civil, Ingeniero Civil o Ingeniero en Construcción con mínimo 10 años de experiencia en el cargo. Advertencia: fecha de publicación exacta no visible (\"más de 15 días\"); empresa no identificada (confidencial); el aviso menciona inicio laboral en julio 2026, posible dato desactualizado del portal."
     },
     {
@@ -44,7 +44,7 @@
       "url": "https://www.laborum.cl/empleos/jefe-de-terreno-para-obra-en-construccion-en-temuco-1118418378.html",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Jefe de Terreno senior; dirige, coordina y supervisa la ejecución de la obra en terreno en coordinación con el Administrador de Obra y la Oficina Técnica. Pide Ingeniero Civil en Obras Civiles, Ingeniero en Construcción, Constructor Civil o carrera afín con 5 años de experiencia. Advertencia: relocalización a Temuco, Región de La Araucanía, sin mención de alojamiento ni turnos; empresa no identificada (confidencial)."
     },
     {
@@ -59,7 +59,7 @@
       "url": "https://cl.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-jefe-de-terreno-experiencia-en-hospitales-en-coquimbo-15377717489B18AB61373E686DCF3405",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Jefe de Terreno senior para proyecto hospitalario de alta complejidad, coordinando múltiples especialidades (obra gruesa, instalaciones, terminaciones). Pide Constructor Civil, Ingeniero Constructor o Ingeniero Civil en Obras Civiles con 10 años en construcción y al menos 5 años como Jefe de Terreno. Advertencia: relocalización a Coquimbo, sin mención de alojamiento ni turnos; empresa matriz china de infraestructura ferroviaria, aunque el proyecto en sí es edificación hospitalaria."
     },
     {
@@ -74,8 +74,68 @@
       "url": "https://cl.indeed.com/viewjob?jk=eb4e353d7d3b5411",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Pide Ingeniería en Construcción, Construcción Civil o Ingeniería Civil con 5 a 8 años de experiencia en ejecución y supervisión de proyectos. Advertencia: tipo de proyecto no especificado en el aviso; fecha exacta de publicación no visible."
+    },
+    {
+      "id": "butik-consultores-jefe-de-proyectos-obras-montajes-retail-santiago",
+      "title": "Jefe/a de Proyectos de Obras y Montajes, Rubro Retail",
+      "company": "BUTIK Consultores (consultora; cliente final no identificado)",
+      "location": "Santiago",
+      "region": "Metropolitana",
+      "sector": "edificacion",
+      "salary": null,
+      "source": "LinkedIn",
+      "url": "https://cl.linkedin.com/jobs/view/jefe-de-proyectos-de-obras-y-montajes-rubro-retail-at-butik-consultores-4456377647",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "status": "new",
+      "note": "Cargo de ascenso (jefatura de proyectos). Lidera planificación, ejecución y supervisión técnica de proyectos de montajes estructurales y obras en tiendas y centros comerciales (rubro retail). Pide título de Construcción Civil, Ingeniería en Construcción, Ingeniería Civil, Ingeniería Industrial, Arquitectura o carrera afín, desde 3 años liderando proyectos de obras o montajes. Advertencia: aviso de consultora, empresa final no identificada."
+    },
+    {
+      "id": "confidencial-jefe-proyectos-construccion-equipamiento-las-condes",
+      "title": "Jefe/a de Proyectos de Construcción y Equipamiento",
+      "company": "Confidencial (empresa del rubro comercial y retail)",
+      "location": "Las Condes",
+      "region": "Metropolitana",
+      "sector": "edificacion",
+      "salary": null,
+      "source": "LinkedIn",
+      "url": "https://cl.linkedin.com/jobs/view/jefe-a-de-proyectos-de-construcci%C3%B3n-y-equipamiento-at-empresa-confidencial-4456349402",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "status": "new",
+      "note": "Cargo de ascenso. Actúa como administrador de obra liderando la construcción, equipamiento y apertura de nuevos locales retail a nivel nacional. Pide título de Ingeniería en Construcción o Construcción Civil, al menos 5 años en jefaturas de administración de obras y 2 años específicos en retail. Advertencia: empresa no identificada (confidencial)."
+    },
+    {
+      "id": "constructora-oval-administrador-de-obra-chillan",
+      "title": "Administrador de Obra",
+      "company": "Constructora Oval Ltda.",
+      "location": "Chillán",
+      "region": "Ñuble",
+      "sector": "edificacion",
+      "salary": null,
+      "source": "Laborum",
+      "url": "https://www.laborum.cl/empleos/administrador-de-obra-chillan-constructora-oval-ltda.-1118424711.html",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "status": "new",
+      "note": "Cargo objetivo exacto en proyectos de edificación o viviendas en extensión (DS49-DS19). Pide Ingeniero Civil, Constructor Civil o Ingeniero en Construcción con mínimo 5 años como Administrador de Obra. Advertencia: empresa señala preferencia por candidatos residentes en la Región de Ñuble."
+    },
+    {
+      "id": "ebco-administrador-de-obra-santiago",
+      "title": "Administrador de Obra",
+      "company": "EBCO S.A.",
+      "location": "Santiago",
+      "region": "Metropolitana",
+      "sector": "edificacion",
+      "salary": null,
+      "source": "trabajo.org",
+      "url": "https://cl.trabajo.org/oferta-3829-7c3eb8140753f99e2ffdc0508f517e94",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "status": "new",
+      "note": "Cargo objetivo exacto para liderar un proyecto de edificación residencial en altura en la Región Metropolitana. Pide Constructor Civil, Ingeniero en Construcción o Ingeniero Civil Industrial, mínimo 6 años en construcción con experiencia comprobable en al menos 2 proyectos habitacionales y en edificación en altura. Advertencia: EBCO también publica Jefe de Terreno RM (ya en este tablero), cargo distinto."
     },
     {
       "id": "empresa-industrial-ingeniero-administrador-de-contrato-curico",
@@ -89,7 +149,7 @@
       "url": "https://cl.linkedin.com/jobs/view/ingeniero-administrador-de-contrato-at-empresa-industrial-4459368277",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Cargo objetivo exacto: administra y controla el contrato de construcción como contraparte técnico-administrativa del contratista en proyectos de edificación corporativa, industrial o logística. Pide Ingeniero Civil, Ingeniero Constructor o Ingeniero en Construcción con 3 a 5 años de experiencia. Advertencia: relocalización a Curicó, Región del Maule, sin mención de alojamiento ni turnos; empresa contratante no identificada (solo \"Empresa Industrial\")."
     },
     {
@@ -104,7 +164,7 @@
       "url": "https://cl.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-administradora-directora-de-obra-en-pozo-almonte-CB94243F251E47D561373E686DCF3405",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Proyecto de infraestructura eléctrica industrial de gran envergadura (menciona posible vínculo con energías renovables/fotovoltaico). Pide Constructor Civil o Ingeniero Civil con al menos 8 años liderando obras eléctricas de gran envergadura. Advertencia: relocalización a Pozo Almonte, Región de Tarapacá, sin mención de alojamiento ni turnos; empresa no identificada (búsqueda confidencial)."
     },
     {
@@ -134,7 +194,7 @@
       "url": "https://cl.linkedin.com/jobs/view/jefe-a-de-oficina-t%C3%A9cnica-t1-%E2%80%93-l%C3%ADnea-7-de-metro-at-r-q-ingenier%C3%ADa-4457275393",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Liderar la oficina técnica (control de costos, programación, seguimiento contractual) de un contrato de Inspección de Obras Civiles para el Metro Línea 7; pide Ingeniería Civil o Construcción Civil con 10 años de experiencia profesional y participación en contratos de 700.000 UF o más. Advertencia: aunque el título es Jefe de Oficina Técnica (cargo objetivo), el contrato base es de inspección técnica (ITO) de infraestructura ferroviaria; evaluar si aplica la exclusión de ITO."
     },
     {
@@ -149,7 +209,7 @@
       "url": "https://www.laborum.cl/empleos/jefe-de-oficina-tecnica-cabrero-elecnor-chile-s-a-1118400635.html",
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "status": "new",
+      "status": "active",
       "note": "Pide título de Ingeniería Civil, Construcción Civil, Ingeniería en Construcción o carrera afín con mínimo 5 años de experiencia. Advertencia: proyecto de construcción de subestaciones eléctricas (infraestructura energética), no edificación; relocalización a Cabrero, Región del Biobío, sin mención de alojamiento ni turnos."
     },
     {
@@ -313,7 +373,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-2254-e1bb8fde567747bd4d9c7fd636301d65",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Cargo objetivo exacto; pide 5 años administrando obras de edificación, Construcción Civil o Ingeniería en Construcción, licencia clase B, CAD y MS Project. Advertencia: proyecto de 9 casas de 2 pisos en hormigón armado (15 meses), escala menor que la altura; aviso de consultora, empresa final no identificada; el portal muestra un campo de renta no interpretable. Publicado hace 4 días."
     },
@@ -328,7 +388,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-1401-a58034f774a9112185b132beba54215a",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Cargo objetivo exacto en vivienda con subsidio; pide al menos 5 años en administración de obras y título en Construcción Civil, Ingeniería en Construcción o Arquitectura. Advertencia: relocalización a Rancagua, sin mención de alojamiento; sin turnos; aviso de consultora. Publicado hace 24 horas."
     },
@@ -343,7 +403,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-3829-47595a1e0c9f76c3fc8b81d6c50025d2",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Pide Ingeniero Civil, Ingeniero en Construcción, Constructor Civil o Arquitecto con mínimo 7 años desde la titulación y experiencia como residente en al menos 3 edificios de uso público de 300 m² o más. Advertencia: exige residir en Punta Arenas o cercanías o disposición a radicarse allí; no menciona alojamiento; jornada L-V sin turnos; contrato a plazo fijo y luego indefinido. Publicado hace 4 horas."
     },
@@ -433,7 +493,7 @@
       "source": "Jooble; también en trabajo.org",
       "url": "https://cl.jooble.org/rjdp/-2888513613109034661",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Pide Ing. Civil, Mecánica, Eléctrica, Industrial o afín con 5 a 8 años en oficina técnica o coordinación de proyectos; Revit/Navisworks/AutoCAD avanzado y gestión de RFI. Advertencias: enfoque en instalaciones MEP y montaje (data centers, hospitales) más que en obra gruesa; renta modesta para el perfil. Publicado hace ~12 días; fecha exacta no visible."
     },
@@ -463,7 +523,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-4039-12e93c1571c4016ab44a93e1c364c1a1",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Cargo objetivo exacto; título Ingeniero Civil en Obras Civiles y/o Constructor Civil, mínimo 3 años; construcción y/o montaje industrial, MS Project y Last Planner. Advertencia: Promet pertenece al grupo Cintac/CAP, que también tiene división minera; el aviso en sí no menciona faena minera. Turno 5x2 en Rancagua (fuera de Santiago/Valparaíso), sin mención de alojamiento."
     },
@@ -478,7 +538,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-4039-3b0c147d36b47a1cf9b26099bfd9e5f9",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Construcción de plantas solares; acepta Ingeniero Eléctrico, Constructor Civil o carrera técnica (Constructor Civil habilita); mínimo 3 años en construcción. Advertencia: sector energía solar, no edificación en altura; exige licencia clase B y compatibilidad con trabajo en altura (excluyentes)."
     },
@@ -568,7 +628,7 @@
       "source": "trabajo.org",
       "url": "https://cl.trabajo.org/oferta-1401-662f2faeda480dc2ede6dcbf149f2665",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Ingeniero Civil, Ingeniero Constructor o Constructor Civil; exige mínimo 12 años profesionales (límite superior del rango aceptado) y 7 años como Jefe de Oficina Técnica. Advertencia: obra en Talagante (dentro de la Región Metropolitana), empresa ofrece traslado desde el metro; no especifica tipo de proyecto."
     },
@@ -583,7 +643,7 @@
       "source": "Indeed Chile",
       "url": "https://cl.indeed.com/viewjob?jk=e8474e0e026bd57e",
       "first_seen": "2026-08-29",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "status": "active",
       "note": "Coordinación BIM en obra de gran escala (referencias a Metro) con Revit, Navisworks y ACC; pide Arquitecto, Ing. Civil en Obras Civiles o Constructor Civil con diplomado BIM. Advertencia: exige mínimo 5 años en coordinación de proyectos BIM en edificación, más de lo que respalda un diplomado. Fecha exacta no visible (filtro de últimos 14 días)."
     },
