@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-01 17:05",
+  "updated": "2026-09-02 07:15",
   "runs": [
+    {
+      "date": "2026-09-02",
+      "found": 54,
+      "new": 3,
+      "closed": 0,
+      "note": "Navegador: Claude in Chrome bloqueado de nuevo por selección ambigua entre dos Chrome vinculados (sesión no interactiva, sin nadie para responder); se usó el navegador integrado (Claude Browser) como canal principal sin insistir con Claude in Chrome. LinkedIn: 4 búsquedas (administrador de obra, coordinador BIM, gerente de construcción, jefe de proyecto inmobiliaria), ~13 fichas individuales abiertas; 0 nuevas (todas descartadas por minería, ITO, carrera exclusiva no aceptada, años insuficientes, o rol comercial/ventas). Laborum: 5 búsquedas (administrador-de-obra, jefe-de-oficina-tecnica, coordinador-bim, gerente-de-construccion, administrador-de-contrato); 2 nuevas incorporadas (HP Group Selección -cliente confidencial- Jefe de Oficina Técnica, y Gerente Visitador de importante constructora confidencial, esta última marcada como cargo de ascenso); descartados avisos de minería, ITO, obras viales/hidráulicas y administrativos de obra. Computrabajo: 2 búsquedas (administrador-de-obra, jefe-de-oficina-tecnica) vía extracción de enlaces (~40 fichas listadas, 5 abiertas en detalle); 0 nuevas, mayoría ITO, minería o transmisión eléctrica AT. Chiletrabajos y Trabajando.cl: se probaron una vez cada uno y volvieron a fallar (buscador que ignora el término y página caída, respectivamente); no se insistió. WebFetch en la nube: 8 consultas (Indeed Chile x5, trabajo.org x3); 1 nueva incorporada (Upa y Shell, Jefe de Proyectos Inmobiliarios Retail, Huechuraba); se descartaron nuevamente los avisos de empresas plantilla reincidentes en Indeed (4Mix Beto, Rajtattva, Ingenieros Contracting, Helena Frey, Peyvand, JP Budowa, Legend Construction, Sottomayor Design, CM ElectroSecur) y una ficha de Prefabricadas Premium que un listado de Indeed reportó pero que no existía al verificar. Se reconfirmaron como activas 14 ofertas ya existentes cuyo enlace o listado se volvió a encontrar en esta pasada (LinkedIn, Laborum, Computrabajo y trabajo.org); el resto de las 51 ofertas previas del tablero no se reintentó en esta ejecución y se mantiene sin cambios, sin marcar ninguna como cerrada."
+    },
     {
       "date": "2026-09-01",
       "found": 51,
