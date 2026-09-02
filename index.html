@@ -78,7 +78,7 @@
     font-size: 15px; line-height: 1.5;
   }
   a { color: var(--accent); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--new); outline-offset: 2px; }
+  a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--new); outline-offset: 2px; }
   .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 
   header { display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
@@ -94,10 +94,13 @@
   .stat .l { font-size: 12px; color: var(--ink-2); text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
   .stat.new .n { color: var(--new-ink); background: var(--new); display: inline-block; padding: 0 8px; }
 
-  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; align-items: center; }
-  .filters .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin-right: 4px; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; margin: 0 0 20px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .filters .lbl, .sortbar .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin-right: 4px; }
   .chip { font: inherit; font-size: 13px; padding: 5px 11px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; border-radius: 999px; }
   .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .sortbar { display: flex; align-items: center; gap: 8px; }
+  .sortbar select { font: inherit; font-size: 13px; padding: 6px 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 4px; cursor: pointer; }
 
   .day { margin-top: 28px; }
   .day h2 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 600; font-size: 22px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 10px; display: flex; gap: 12px; align-items: baseline; }
@@ -116,6 +119,7 @@
   .tag.new { background: var(--new); color: var(--new-ink); font-weight: 600; }
   .tag.closed { background: var(--closed); color: #fff; }
   .tag.salary { background: var(--accent); color: var(--accent-ink); }
+  .tag.deadline.urgent { background: var(--closed); color: #fff; font-weight: 600; }
   .job .note { grid-column: 1 / -1; font-size: 13.5px; color: var(--ink-2); margin: 2px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }
   .job .src { grid-column: 1 / -1; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); }
 
@@ -175,6 +179,7 @@
     .job { grid-template-columns: 1fr; }
     .tags { justify-content: flex-start; }
     .pager { flex-wrap: wrap; }
+    .toolbar { flex-direction: column; align-items: flex-start; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .job { transition: transform .15s ease; }
@@ -229,7 +234,7 @@
         <p>Se excluyen la minería en todas sus formas (faenas y proyectos EPC/EPCM), prácticas, cargos junior o de ayudante, los "administrativos de obra" (cargo contable que los buscadores confunden con administrador), profesional de terreno sin jefatura, inspección técnica de obra (ITO), avisos que piden menos de 3 o más de 15 años, cargos fuera de Chile, avisos con texto plantilla o empresa no verificable, y avisos de más de 30 días.</p>
 
         <h3>4 · Verificación</h3>
-        <p>Cada enlace se abre y se comprueba que corresponde al aviso. La renta se muestra solo si el aviso la publica; nunca se estima. La nota de cada tarjeta explica por qué encaja y qué advertir (turnos, tipo de obra, años exigidos, fecha de cierre).</p>
+        <p>Cada enlace se abre y se comprueba que corresponde al aviso. La renta se muestra solo si el aviso la publica; nunca se estima. Lo mismo aplica a la fecha de publicación original y al plazo de postulación: solo se registran cuando el portal los declara explícitamente, nunca se calculan a partir de frases como "hace 4 días". La nota de cada tarjeta explica por qué encaja y qué advertir (turnos, tipo de obra, años exigidos, fecha de cierre).</p>
 
         <h3>5 · Ciclo de vida</h3>
         <div class="flow">
@@ -242,20 +247,37 @@
 
         <h3>6 · Publicación</h3>
         <p>Esta página es estática y vive en GitHub Pages. La tarea diaria no reescribe el sitio: solo actualiza el archivo <strong>data.json</strong> del repositorio, y la página lo lee cada vez que alguien la abre. Por eso la dirección nunca cambia y siempre muestra la última búsqueda, sin versiones que haya que ir habilitando a mano. Cada actualización queda además como un commit, de modo que el historial del tablero es el historial del repositorio.</p>
+
+        <h3>7 · Orden</h3>
+        <p>El selector "Ordenar por" permite ver el listado por fecha de detección (el orden agrupado de siempre), por fecha de publicación original del aviso, por plazo de postulación (lo que vence antes primero) o alfabéticamente por empresa o cargo. Cuando un aviso no declara publicación o plazo, queda al final de ese orden en vez de desaparecer.</p>
       </div>
     </div>
   </details>
 
   <div class="cellfilter" id="cellfilter" hidden></div>
 
-  <div class="filters" id="filters" hidden>
-    <span class="lbl">Ver</span>
-    <button class="chip" data-f="all" aria-pressed="true">Todas</button>
-    <button class="chip" data-f="new" aria-pressed="false">Solo nuevas</button>
-    <button class="chip" data-f="edificacion" aria-pressed="false">Edificación</button>
-    <button class="chip" data-f="industrial" aria-pressed="false">Industrial</button>
-    <button class="chip" data-f="obras-civiles" aria-pressed="false">Obras civiles</button>
-    <button class="chip" data-f="salary" aria-pressed="false">Con renta publicada</button>
+  <div class="toolbar">
+    <div class="filters" id="filters" hidden>
+      <span class="lbl">Ver</span>
+      <button class="chip" data-f="all" aria-pressed="true">Todas</button>
+      <button class="chip" data-f="new" aria-pressed="false">Solo nuevas</button>
+      <button class="chip" data-f="edificacion" aria-pressed="false">Edificación</button>
+      <button class="chip" data-f="industrial" aria-pressed="false">Industrial</button>
+      <button class="chip" data-f="obras-civiles" aria-pressed="false">Obras civiles</button>
+      <button class="chip" data-f="salary" aria-pressed="false">Con renta publicada</button>
+    </div>
+    <div class="sortbar" id="sortbar" hidden>
+      <span class="lbl">Ordenar por</span>
+      <select id="sortsel">
+        <option value="detected_desc">Detección (recientes primero)</option>
+        <option value="detected_asc">Detección (antiguas primero)</option>
+        <option value="published_desc">Publicación original (recientes primero)</option>
+        <option value="published_asc">Publicación original (antiguas primero)</option>
+        <option value="deadline_asc">Plazo de postulación (vence antes primero)</option>
+        <option value="company_asc">Empresa (A-Z)</option>
+        <option value="title_asc">Cargo (A-Z)</option>
+      </select>
+    </div>
   </div>
 
   <div id="content"></div>
@@ -266,7 +288,7 @@
       <a href="https://github.com/jcastillose/obra-abierta/blob/main/data.json">data.json</a>
       y el código está en
       <a href="https://github.com/jcastillose/obra-abierta">github.com/jcastillose/obra-abierta</a>.</p>
-    <p>Cada aviso enlaza al portal donde fue publicado; la renta aparece solo cuando el aviso la declara.</p>
+    <p>Cada aviso enlaza al portal donde fue publicado; la renta, la fecha de publicación y el plazo de postulación aparecen solo cuando el aviso los declara.</p>
   </footer>
 </div>
 
@@ -274,6 +296,7 @@
 function boot(data) {
   var jobs = (data.jobs || []).slice();
   var filter = 'all';
+  var sort = 'detected_desc';
   var cellFilter = null;
   var page = 1;
   var PAGE_SIZE = 20;
@@ -287,12 +310,47 @@ function boot(data) {
     var p = s.split('-'); if (p.length < 3) return s;
     return parseInt(p[2], 10) + ' ' + MESES[parseInt(p[1], 10) - 1] + ' ' + p[0];
   }
-  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
   function scrollToContent() {
     try {
       if (content.scrollIntoView) content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (e) {}
   }
+
+  // --- Comparadores de orden ---
+  function cmpDateField(field, dir) {
+    return function (a, b) {
+      var av = a[field], bv = b[field];
+      if (!av && !bv) return 0;
+      if (!av) return 1;
+      if (!bv) return -1;
+      if (av < bv) return dir === 'asc' ? -1 : 1;
+      if (av > bv) return dir === 'asc' ? 1 : -1;
+      return 0;
+    };
+  }
+  function cmpText(field) {
+    return function (a, b) {
+      var av = (a[field] || '').toString();
+      var bv = (b[field] || '').toString();
+      if (!av && bv) return 1;
+      if (av && !bv) return -1;
+      return av.localeCompare(bv, 'es', { sensitivity: 'base' });
+    };
+  }
+  var SORTS = {
+    'detected_desc': { grouped: true, dayDir: 'desc' },
+    'detected_asc': { grouped: true, dayDir: 'asc' },
+    'published_desc': { grouped: false, cmp: cmpDateField('published_date', 'desc') },
+    'published_asc': { grouped: false, cmp: cmpDateField('published_date', 'asc') },
+    'deadline_asc': { grouped: false, cmp: cmpDateField('deadline', 'asc') },
+    'company_asc': { grouped: false, cmp: cmpText('company') },
+    'title_asc': { grouped: false, cmp: cmpText('title') }
+  };
 
   document.getElementById('profile').textContent = data.profile || '';
   document.getElementById('stamp').innerHTML = (data.updated
@@ -324,6 +382,7 @@ function boot(data) {
     content.innerHTML = '<div class="empty"><h2>Todavía no hay ofertas</h2>Cuando corra la primera búsqueda, las ofertas aparecerán aquí agrupadas por el día en que se detectaron.</div>';
   } else {
     document.getElementById('filters').hidden = false;
+    document.getElementById('sortbar').hidden = false;
     renderHeatmap();
     render();
   }
@@ -361,6 +420,17 @@ function boot(data) {
       pagerEl.hidden = true;
       return;
     }
+
+    var cfg = SORTS[sort] || SORTS.detected_desc;
+
+    if (cfg.grouped) {
+      renderGrouped(list, cfg.dayDir);
+    } else {
+      renderFlat(list, cfg.cmp);
+    }
+  }
+
+  function renderGrouped(list, dayDir) {
     var paginated = list.length > PAGE_SIZE;
     var totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
     if (page > totalPages) page = totalPages;
@@ -369,17 +439,36 @@ function boot(data) {
 
     var groups = {};
     pageList.forEach(function (j) { (groups[j.first_seen] = groups[j.first_seen] || []).push(j); });
-    var days = Object.keys(groups).sort().reverse();
+    var days = Object.keys(groups).sort();
+    if (dayDir === 'desc') days.reverse();
     content.innerHTML = days.map(function (d) {
       return '<section class="day"><h2>' + esc(fmtDate(d)) + ' <small>' + groups[d].length + (groups[d].length === 1 ? ' oferta' : ' ofertas') + (paginated ? ' en esta página' : ' detectadas') + '</small></h2><div class="jobs">' +
-        groups[d].map(card).join('') + '</div></section>';
+        groups[d].map(function (j) { return card(j, true); }).join('') + '</div></section>';
     }).join('');
 
+    renderPager(list.length, paginated, totalPages);
+  }
+
+  function renderFlat(list, cmp) {
+    var sorted = list.slice().sort(cmp);
+    var paginated = sorted.length > PAGE_SIZE;
+    var totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
+    if (page > totalPages) page = totalPages;
+    if (page < 1) page = 1;
+    var pageList = paginated ? sorted.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) : sorted;
+
+    content.innerHTML = '<section class="day"><div class="jobs">' +
+      pageList.map(function (j) { return card(j, false); }).join('') + '</div></section>';
+
+    renderPager(sorted.length, paginated, totalPages);
+  }
+
+  function renderPager(total, paginated, totalPages) {
     if (paginated) {
       pagerEl.hidden = false;
       pagerEl.innerHTML =
         '<button type="button" id="pager-prev"' + (page <= 1 ? ' disabled' : '') + '>← Anterior</button>' +
-        '<span class="pageinfo">Página ' + page + ' de ' + totalPages + ' · ' + list.length + ' ofertas</span>' +
+        '<span class="pageinfo">Página ' + page + ' de ' + totalPages + ' · ' + total + ' ofertas</span>' +
         '<button type="button" id="pager-next"' + (page >= totalPages ? ' disabled' : '') + '>Siguiente →</button>';
       var prevBtn = document.getElementById('pager-prev');
       var nextBtn = document.getElementById('pager-next');
@@ -439,20 +528,41 @@ function boot(data) {
     wrap.hidden = false;
   }
 
-  function card(j) {
+  function deadlineTag(j) {
+    if (!j.deadline) return '';
+    var urgent = false;
+    try {
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      var d = new Date(j.deadline + 'T00:00:00');
+      var diffDays = Math.round((d - today) / 86400000);
+      urgent = diffDays <= 5;
+      var label = diffDays < 0 ? 'Venció ' + esc(fmtDate(j.deadline)) : 'Cierra ' + esc(fmtDate(j.deadline));
+      return '<span class="tag deadline' + (urgent ? ' urgent' : '') + '">' + label + '</span>';
+    } catch (e) {
+      return '<span class="tag deadline">Cierra ' + esc(fmtDate(j.deadline)) + '</span>';
+    }
+  }
+
+  function card(j, grouped) {
     var cls = 'job' + (j.status === 'new' ? ' is-new' : '') + (j.status === 'closed' ? ' is-closed' : '');
     var tags = '';
     if (j.status === 'new') tags += '<span class="tag new">Nueva</span>';
     if (j.status === 'closed') tags += '<span class="tag closed">Cerrada</span>';
     if (j.sector && SECTOR[j.sector]) tags += '<span class="tag">' + esc(SECTOR[j.sector]) + '</span>';
     if (j.salary) tags += '<span class="tag salary">' + esc(j.salary) + '</span>';
+    tags += deadlineTag(j);
     var title = j.url ? '<a href="' + esc(j.url) + '" target="_blank" rel="noopener">' + esc(j.title) + '</a>' : esc(j.title);
-    var meta = [j.company, j.location || j.region].filter(Boolean).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
+    var metaParts = [j.company, j.location || j.region];
+    if (j.published_date) metaParts.push('Publicado ' + fmtDate(j.published_date));
+    var meta = metaParts.filter(Boolean).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
+    var srcParts = [j.source || ''];
+    if (!grouped) srcParts.push('detectado ' + fmtDate(j.first_seen));
+    if (j.last_seen && j.last_seen !== j.first_seen) srcParts.push('visto por última vez ' + fmtDate(j.last_seen));
     return '<article class="' + cls + '">' +
       '<div><p class="t">' + title + '</p><p class="m">' + meta + '</p></div>' +
       '<div class="tags">' + tags + '</div>' +
       (j.note ? '<p class="note">' + esc(j.note) + '</p>' : '') +
-      '<div class="src">' + esc(j.source || '') + (j.last_seen && j.last_seen !== j.first_seen ? ' · visto por última vez ' + esc(fmtDate(j.last_seen)) : '') + '</div>' +
+      '<div class="src">' + esc(srcParts.filter(Boolean).join(' · ')) + '</div>' +
       '</article>';
   }
 
@@ -465,12 +575,22 @@ function boot(data) {
       render();
     });
   });
+
+  var sortSel = document.getElementById('sortsel');
+  if (sortSel) {
+    sortSel.value = sort;
+    sortSel.addEventListener('change', function (e) {
+      sort = e.target.value;
+      page = 1;
+      render();
+    });
+  }
 }
 
 // Los datos viven en data.json, que la tarea diaria reescribe. El parametro de
 // consulta y no-store evitan que el navegador o el CDN sirvan una copia antigua.
 document.getElementById('content').innerHTML =
-  '<div class="empty"><h2>Cargando ofertas\u2026</h2>Leyendo data.json</div>';
+  '<div class="empty"><h2>Cargando ofertas…</h2>Leyendo data.json</div>';
 
 fetch('data.json?v=' + Date.now(), { cache: 'no-store' })
   .then(function (r) {
@@ -482,7 +602,7 @@ fetch('data.json?v=' + Date.now(), { cache: 'no-store' })
     document.getElementById('content').innerHTML =
       '<div class="empty"><h2>No se pudieron cargar las ofertas</h2>' +
       'No fue posible leer <code>data.json</code> (' + String(err.message || err) + '). ' +
-      'Recarga la p\u00e1gina en unos minutos.</div>';
+      'Recarga la página en unos minutos.</div>';
   });
 </script>
 </body>
