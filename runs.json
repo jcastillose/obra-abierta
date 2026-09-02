@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-02 07:15",
+  "updated": "2026-09-02 06:30",
   "runs": [
+    {
+      "date": "2026-09-02",
+      "found": 60,
+      "new": 6,
+      "closed": 0,
+      "note": "Tercera ejecución del día. Navegador: Claude in Chrome funcionó sin bloqueo de selección esta vez y se usó como canal principal para LinkedIn, Laborum y Computrabajo; el navegador integrado (Claude Browser) se usó en paralelo para leer fichas individuales de LinkedIn (Claude in Chrome no renderiza el cuerpo de la descripción en fichas de LinkedIn, solo el navegador integrado lo hace). LinkedIn: 5 búsquedas (administrador de obra, jefe de oficina técnica, coordinador BIM, gerente de construcción, jefe de proyecto inmobiliaria); los listados de las primeras 4 búsquedas devolvieron sistemáticamente una barra fija de 13 resultados mayormente irrelevantes (recomendados genéricos) en vez de coincidencias reales, patrón ya visto en corridas anteriores; solo la búsqueda 'gerente de construcción' devolvió candidatos reales, de los cuales se abrieron 3 fichas completas y se incorporó 1 nueva (Procesum Consultores, Jefe de Terreno, Iquique). Laborum: 5 categorías con recientes=true, listados con descripción completa; se incorporaron 3 nuevas (Eurocorp Jefe de Oficina Técnica, Aguas Andinas Jefe de Oficina Técnica, Administrador de Contrato de obras sanitarias en Quinta Normal) y se reconfirmaron 6 ofertas ya existentes; se descartaron avisos de minería, ITO/AT, vial y 'administrativo de obra'. Computrabajo: 2 búsquedas (administrador-de-obra, jefe-de-oficina-tecnica) vía extracción de enlaces, 4 fichas abiertas en detalle; 0 nuevas (ITO, transmisión eléctrica AT, experiencia insuficiente, o rol de facilities sin carrera de ingeniería). Chiletrabajos y Trabajando.cl: se probaron una vez cada uno y volvieron a fallar como en corridas previas; no se insistió. Búsqueda web complementaria delegada a un subagente (modelo sonnet, instruido a solo reportar fichas abiertas): 6 consultas en Indeed Chile + 4 en trabajo.org; se verificaron manualmente 4 de las URLs reportadas antes de incorporar, resultando en 2 nuevas (Coordinador BIM en CyD Ingeniería -San Antonio- y en Axioma Ingenieros -Los Ángeles-, ambas rol BIM de oficina de ingeniería, categoría 'otro') y varias reconfirmaciones de ofertas ya existentes (Echeverría Izquierdo, 4Fingeniería, Ingeniería Cuatro, EBCO, Constructora Caicona); se descartaron avisos de empresas plantilla reincidentes ya identificadas y roles mineros/ITO. En total se reconfirmaron como activas 11 ofertas ya existentes; el resto del tablero no se reintentó en esta ejecución y se mantiene sin cambios, sin marcar ninguna como cerrada."
+    },
     {
       "date": "2026-09-02",
       "found": 54,
