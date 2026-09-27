@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-26 09:40",
+  "updated": "2026-09-27 06:35",
   "runs": [
+    {
+      "date": "2026-09-27",
+      "found": 145,
+      "new": 2,
+      "closed": 0,
+      "note": "NAVEGADOR: Claude in Chrome (LinkedIn, Laborum, Computrabajo) + navegador integrado (solo para intentar leer fichas de LinkedIn, bloqueado por authwall sin sesion). LinkedIn: la vista de listado nueva no muestra enlaces reales en el DOM (solo botones sin href); se extrajeron URLs abriendo cada ficha por coordenadas. Se revisaron 5 de las 6 consultas pedidas (administrador de obra, jefe de obra, coordinador BIM, jefe de oficina tecnica con tildes; no se alcanzo gerente de construccion ni jefe de proyecto inmobiliaria por el costo de extraccion). De ~10 fichas abiertas, varias no cargaron descripcion a tiempo y se descartaron por regla (no se pudo verificar anios/carrera); se confirmo 1 aviso nuevo (DFV, Jefe de Proyectos RM) y se descartaron 2 por mineria/ferroviario (Fugro sondajes geotecnicos gran mineria; R&Q Linea 7 Metro). Laborum: se revisaron las 6 consultas pedidas (listados con descripcion completa); administrador-de-obra (24), jefe-de-obra (1), jefe-de-oficina-tecnica (3), coordinador-bim (0), gerente-de-construccion (1, minero, descartado), administrador-de-contrato (37, pagina 1); ningun aviso nuevo, todos los relevantes ya estaban en el tablero. Computrabajo: se revisaron administrador-de-obra y jefe-de-oficina-tecnica via snippet JS; se descartaron ADO/ITO electrico Talca, retail Las Condes (1-2 anios, insuficiente), Rancagua (rubro industrial y minero) y variantes Pozo Almonte (ya existentes). Chiletrabajos y Trabajando.cl no se probaron esta vez por tiempo. Subagente (WebSearch/WebFetch, modelo sonnet) reviso Indeed Chile y trabajo.org con 8 consultas, abriendo 17 fichas en Indeed y 23 en trabajo.org; encontro 1 aviso nuevo (Constructora Horizonte Sur, Jefe de Obra, La Granja, sin anios explicitos) y confirmo 14 avisos ya existentes (Echeverria Izquierdo, Constructora del Arte, Constructora Bellavista, Constructora Caicona, Promet, Kuzacorp, Galera, Arqon, GrupoEuro, Axioma, Intexa, Creaxxion, Ingenieria Cuatro, Grafton); descarto por mineria explicita (Imopac, R&Q Calama, Nexxo-EI), carrera exclusiva no aceptada (Bosch Ingeniero Electrico), experiencia insuficiente (Delporte, 2 anios), y fuerte sospecha de plantillas repetidas entre empresas (4Mix Beto, Rajtattva, Ingenieros Contracting, Helena Frey, Peyvand, Legend Construction, CaviaSoft, Antena Seis, Donglong)."
+    },
     {
       "date": "2026-09-26",
       "found": 143,
